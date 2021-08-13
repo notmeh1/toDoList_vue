@@ -1,12 +1,12 @@
 <template>
   <div class="container">
-    <h1>Crea una tarea nueva</h1>
+    <h1 class="title">Crea una tarea nueva</h1>
       <div class="input">
       <label>Tareas</label>
       <input type="text" v-model="newTarea" placeholder="Ingrese nueva tarea"/>
       <button @click="addNewTarea">Crear</button>
     </div>
-    <h1>Lista</h1>
+    <h1 class="title">Lista</h1>
     <ul>
       <li v-for="(Tarea, index) in Tareas" :key="index">
         {{index}} : {{Tarea}}
@@ -27,8 +27,8 @@ export default {
       this.Tareas.push(this.newTarea);
       this.newTarea = "";
     },
-  },
-};
+  }
+}
 </script>
 
 <style>
@@ -42,5 +42,8 @@ body {
   }
   .input * {
     margin: 0 0.3em;
+  }
+  .title {
+    color: #808080
   }
 </style>
