@@ -1,5 +1,7 @@
 # todolist
 
+// Fernando Vargas
+
 ## Project setup
 ```
 npm install
